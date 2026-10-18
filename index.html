@@ -1,34 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Nova | Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-box">
-        <h1>Welcome Back</h1>
-        <p>Login to continue</p>
 
-        <form id="loginForm">
-            <label for="email">Email</label>
-            <input type="email" id="email"
-                   placeholder="Enter your email" required>
+    <main class="login-container">
+        <section class="welcome-panel">
+            <div class="brand">✦ NOVA</div>
 
-            <label for="password">Password</label>
-            <input type="password" id="password"
-                   placeholder="Enter password" required minlength="6">
+            <div class="welcome-content">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h1>Your next chapter starts here.</h1>
+                <p class="description">
+                    Sign in to continue your journey with a simple,
+                    secure-looking and modern interface.
+                </p>
+            </div>
 
-            <label class="show-password">
-                <input type="checkbox" id="showPassword">
-                Show password
-            </label>
+            <p class="panel-footer">Simple design. Better experience.</p>
+        </section>
 
-            <button type="submit">Login</button>
-            <p id="message" aria-live="polite"></p>
-        </form>
-    </div>
+        <section class="form-panel">
+            <div class="form-wrapper">
+                <div class="mobile-brand">✦ NOVA</div>
+
+                <h2>Sign in</h2>
+                <p class="subtitle">Enter your details to continue.</p>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <div class="password-heading">
+                            <label for="password">Password</label>
+                            <a href="#" id="forgotPassword">Forgot password?</a>
+                        </div>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <label class="show-password">
+                            <input type="checkbox" id="showPassword">
+                            Show password
+                        </label>
+                    </div>
+
+                    <label class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
+                    </label>
+
+                    <button type="submit" id="loginButton">Sign in</button>
+
+                    <p id="message" role="status" aria-live="polite"></p>
+                </form>
+
+                <div class="divider"><span>DEMO LOGIN</span></div>
+
+                <p class="demo-note">
+                    This is a front-end demonstration. No real account
+                    authentication takes place, and passwords are not saved.
+                </p>
+
+                <p class="signup">
+                    Don't have an account? <a href="#" id="signupLink">Sign up</a>
+                </p>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
